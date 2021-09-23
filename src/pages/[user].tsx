@@ -16,7 +16,7 @@ export default function Detail({ avatar_url, name }: DetailProps) {
     )
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ req, params }) => {
+export const getServerSideProps: GetServerSideProps = async ({params }) => {
 
     const { user } = params
     

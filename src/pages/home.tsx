@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router'
-import { FormEvent, useEffect, useState } from 'react';
+import { FormEvent,  useState } from 'react';
 
 import { api } from '../services/client'
 
 import { TheSearchField } from '../components/TheSearchField'
 
 import styles from './stylesHome.module.scss';
-import { signIn, useSession } from 'next-auth/client';
+
 
 export default function Home() {
 

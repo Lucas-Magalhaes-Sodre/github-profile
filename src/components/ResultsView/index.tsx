@@ -35,10 +35,10 @@ export function ResultsView({ name, avatar_url }: UserProps) {
          <img id={styles.foto__perfil} src={avatar_url} alt={name} />
          <h3>{name}</h3>
          <div className={styles.Buttons}>
-         <Repos />
+            <Repos />
          </div>
          <div className={styles.Buttons}>
-         <Starred />
+             <Starred />
          </div>
      </div>
    );
