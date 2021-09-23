@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Github Profile
 
-## Getting Started
+Em sintese a aplicação utiliza a api do GITHUB,consome alguns endpoints e é constituida por três componentes principais:
 
-First, run the development server:
+the search field.
+Results view.
+Dois botões para executar um determinado resultado(repos e starred).
+Ao clicar nos botões de repos e starred, deverá mostrar uma lista simples de cada.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Para acessar as funcionalidades da aplicação o usuário deve estar logado através de uma autenticação com o github que é requerida para tal acesso.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+No campo de busca, ao digitar o nome do perfil do github desejado, são mostradas algumas informações do mesmo e dois botões que clicados deverão mostrar uma lista simples de cada.
+Ao clicar no botão de repos, são listados os repositorios do usuario pesquisado.
+Ao clicar no botão de starred, são listados os repositorios mais visitados por aquele usuario.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## PARA UTILIZAR A APLICAÇÃO:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Para utilizar os Endpoints da aplicação, você precisará estar autenticado, para isso você irá utilizar a autenticação do GITHUB:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Guia Autenticação: https://docs.github.com/pt/developers/apps/building-oauth-apps
 
-## Deploy on Vercel
+Insira as informações obtidas após a seguir passo a passo o guia autenticação no arquivo ".env.example".
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Instale as dependências necessárias como por exemplo o "yarn" antes de colocar a aplicação para rodar.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Por fim, dê um "yarn dev" no terminal terminal do seu editor e utilize a aplicação.
+
+Muito obrigado pela sua atenção!
