@@ -3,13 +3,15 @@
 Em sintese a aplicação utiliza a api do GITHUB,consome alguns endpoints e é constituida por três componentes principais:
 
 the search field.
+
 Results view.
+
 Dois botões para executar um determinado resultado(repos e starred).
 Ao clicar nos botões de repos e starred, deverá mostrar uma lista simples de cada.
 
-Para acessar as funcionalidades da aplicação o usuário deve estar logado através de uma autenticação com o github que é requerida para tal acesso.
+Para acessar as funcionalidades da aplicação o usuário deve estar logado através de uma autenticação com o github, a qual é requerida para tal acesso.
 
-No campo de busca, ao digitar o nome do perfil do github desejado, são mostradas algumas informações do mesmo e dois botões que clicados deverão mostrar uma lista simples de cada.
+No campo de busca, ao digitar o nome do perfil do github desejado, são mostradas algumas informações do deste perfil e dois botões que quando clicados deverão mostrar uma lista simples de cada.
 Ao clicar no botão de repos, são listados os repositorios do usuario pesquisado.
 Ao clicar no botão de starred, são listados os repositorios mais visitados por aquele usuario.
 
