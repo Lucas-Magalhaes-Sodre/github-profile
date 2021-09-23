@@ -5,7 +5,7 @@ import styles from './stylesIndex.module.scss';
 import { useEffect} from 'react';
 
 export default function Home() {
-  const [ session, loading] = useSession()
+  const [ session, loading] = useSession();
 
   const router = useRouter()
 
@@ -18,12 +18,14 @@ export default function Home() {
   }, []);
 
   return  (
-    <div id={styles.login}>
-      <h1>GitHub Autentication</h1>
-
-      <button onClick={(): Promise<void> => signIn('github')}>Login</button>
+    <div id={styles.carregando}>
+      {loading && (
+          <h1>
+            CARREGANDO...
+          </h1>
+          )}
     </div>
-
+    
   );
 }
 
