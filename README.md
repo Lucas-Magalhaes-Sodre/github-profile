@@ -32,3 +32,9 @@ Instale as dependências necessárias como por exemplo o "yarn" antes de colocar
 Por fim, dê um "yarn dev" no terminal terminal do seu editor e utilize a aplicação.
 
 Muito obrigado pela sua atenção!
+
+
+
+
+(Aplicação feita em Next.js).
+(Next.js é um framework para React. O que isso quer dizer? O React é uma biblioteca Javascript para construção de interfaces e o Next é considerado um framework pois adiciona várias funcionalidades em cima do React).
