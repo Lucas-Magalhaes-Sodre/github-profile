@@ -1,27 +1,34 @@
 import { useRouter } from 'next/router'
-import { useSession, getSession, signIn, signOut } from 'next-auth/client'
+import { useSession,  signIn} from 'next-auth/client'
 
 import styles from './stylesIndex.module.scss';
+import { useEffect} from 'react';
 
 export default function Home() {
+  const [ session, loading] = useSession()
 
   const router = useRouter()
 
-  async function handleLogin() {
+  useEffect(() => {
 
-    await signIn('github')
-
+    (session)?
     router.push('home')
+    : signIn('github')
 
-  }
+  }, []);
 
-
-  return (
+  return  (
     <div id={styles.login}>
       <h1>GitHub Autentication</h1>
 
-      <button onClick={handleLogin}>Login</button>
+      <button onClick={(): Promise<void> => signIn('github')}>Login</button>
     </div>
 
-  )
+  );
 }
+
+
+
+
+
+

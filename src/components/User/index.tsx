@@ -22,7 +22,9 @@ export function User({ name, avatar_url }: UserProps) {
 
    const [starred, setStarred] = useState<RepositoryData[]>()
 
-   const [username, setUserName] = useState('')
+   const [username, setUserName] = useState('');
+
+   const [ session, loading] = useSession();
 
    useEffect(() => {
       if (localStorage)
@@ -67,6 +69,9 @@ export function User({ name, avatar_url }: UserProps) {
    }
 
    return (
+      <div>
+         {session.user.name}
+      </div>
       <div id={styles.result}>
 
          <img id={styles.foto__perfil} src={avatar_url} alt={name} />

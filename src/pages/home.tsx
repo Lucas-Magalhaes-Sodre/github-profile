@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router'
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
+
+import { useSession,  signIn} from 'next-auth/client'
 
 import { api } from '../services/client'
 
@@ -7,14 +9,16 @@ import { Header } from '../components/Header'
 
 import styles from './stylesHome.module.scss';
 
+
 export default function Home() {
+    const [ session, loading] = useSession();
 
     const [searchedValue, setSearchedValue] = useState('');
 
-    const router = useRouter()
+    const router = useRouter();
 
     async function getUserData(event: FormEvent) {
-
+        
         event.preventDefault()
 
         try {
