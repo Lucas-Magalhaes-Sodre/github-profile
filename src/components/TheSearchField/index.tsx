@@ -7,7 +7,7 @@ interface HeaderProps {
     children: ReactNode;
 }
 
-export function Header({ children }: HeaderProps) {
+export function TheSearchField({ children }: HeaderProps) {
 
 
 

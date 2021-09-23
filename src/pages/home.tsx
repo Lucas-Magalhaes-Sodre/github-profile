@@ -1,11 +1,12 @@
 import { useRouter } from 'next/router'
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 
 import { api } from '../services/client'
 
-import { Header } from '../components/Header'
+import { TheSearchField } from '../components/TheSearchField'
 
 import styles from './stylesHome.module.scss';
+import { signIn, useSession } from 'next-auth/client';
 
 export default function Home() {
 
@@ -13,6 +14,7 @@ export default function Home() {
 
     const router = useRouter()
 
+    
     async function getUserData(event: FormEvent) {
 
         event.preventDefault()
@@ -33,7 +35,7 @@ export default function Home() {
 
     return (
         <div id={styles.container} >
-            <Header>
+            <TheSearchField>
                 <form onSubmit={getUserData}>
                     <input
                         type="text"
@@ -53,7 +55,7 @@ export default function Home() {
                     </button>
                 </form>
 
-            </Header>
+            </TheSearchField>
 
         </div>
     );

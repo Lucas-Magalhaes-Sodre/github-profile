@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next'
 
-import { User } from '../components/User'
+import { ResultsView } from '../components/ResultsView'
 
 interface DetailProps {
 
@@ -12,7 +12,7 @@ interface DetailProps {
 export default function Detail({ avatar_url, name }: DetailProps) {
 
     return (
-        <User name={name} avatar_url={avatar_url} />
+        <ResultsView name={name} avatar_url={avatar_url} />
     )
 }
 
@@ -25,6 +25,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
     const data = await response.json()
     
     return {
+        
         props: {
             name: data.name,
             avatar_url: data.avatar_url

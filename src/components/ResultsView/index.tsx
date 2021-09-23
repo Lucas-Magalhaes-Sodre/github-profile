@@ -1,3 +1,5 @@
+import { signIn, useSession } from "next-auth/client";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Repos } from "../Repos";
 import { Starred } from "../Starred";
@@ -9,15 +11,20 @@ interface UserProps {
    name?: string;
 }
 
-export function User({ name, avatar_url }: UserProps) {
+export function ResultsView({ name, avatar_url }: UserProps) {
 
   
    const [username, setUserName] = useState('');
 
+   const [ session, loading] = useSession();
+
+   const router = useRouter()
+
+
    useEffect(() => {
       if (localStorage)
          setUserName(localStorage.getItem('username'))
-   }, [])
+   }, []);
 
       
 
