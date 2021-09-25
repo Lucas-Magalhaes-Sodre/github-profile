@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router'
-import { FormEvent,  useState } from 'react';
+import { FormEvent,  useState, useEffect } from 'react';
 
 import { api } from '../services/client'
 
 import { TheSearchField } from '../components/TheSearchField'
+import Cookie from 'js-cookie'
 
 import styles from './stylesHome.module.scss';
 
@@ -13,6 +14,14 @@ export default function Home() {
     const [searchedValue, setSearchedValue] = useState('');
 
     const router = useRouter()
+
+    useEffect(() => {
+        const token = Cookie.get('token')
+
+        if (!token) {
+            router.replace('/')
+        }
+    },[])
 
     
     async function getUserData(event: FormEvent) {
@@ -34,12 +43,12 @@ export default function Home() {
     }
 
     return (
-        <div id={styles.container} >
+        <div id={styles.home} >
             <TheSearchField>
                 <form onSubmit={getUserData}>
                     <input
                         type="text"
-                        id="escrever__perfil"
+                        id={styles.escrever__perfil}
                         placeholder="Digite o endereço de GitHub desejado"
                         value={searchedValue}
                         onChange={event => setSearchedValue(event.target.value)}

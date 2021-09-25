@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Repos } from "../Repos";
 import { Starred } from "../Starred";
+import Cookie from 'js-cookie'
 
 import styles from './styles.module.scss'
 
@@ -20,11 +21,18 @@ export function ResultsView({ name, avatar_url }: UserProps) {
 
    const router = useRouter()
 
-
    useEffect(() => {
+      const token = Cookie.get('token')
+
+      if (!token) {
+          router.replace('/')
+      }
+  },[])
+
+   /*useEffect(() => {
       if (localStorage)
          setUserName(localStorage.getItem('username'))
-   }, []);
+   }, []);*/
 
       
 
@@ -34,10 +42,10 @@ export function ResultsView({ name, avatar_url }: UserProps) {
 
          <img id={styles.foto__perfil} src={avatar_url} alt={name} />
          <h3>{name}</h3>
-         <div className={styles.Buttons}>
+         <div id={styles.button_repos}>
             <Repos />
          </div>
-         <div className={styles.Buttons}>
+         <div id={styles.button_starred}>
              <Starred />
          </div>
      </div>

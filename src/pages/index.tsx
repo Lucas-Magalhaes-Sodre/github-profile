@@ -1,29 +1,49 @@
 import { useRouter } from 'next/router'
-import { useSession,  signIn} from 'next-auth/client'
+import { useSession,  signIn, signOut} from 'next-auth/client'
+import Cookie from 'js-cookie'
+
 
 import styles from './stylesIndex.module.scss';
 import { useEffect} from 'react';
 
 export default function Home() {
-  const [ session, loading] = useSession();
-
   const router = useRouter()
 
-  useEffect(() => {
 
-    (session)?
-    router.push('home')
-    : signIn('github')
+ function login(){
+  Cookie.set('token', 'custon-token-here',)
+  signIn('github')
+}
+  
+  
+ 
 
-  }, []);
+ function logoff(){
+   Cookie.remove('token')
+}
+
+
+
 
   return  (
-    <div id={styles.carregando}>
-      {loading && (
-          <h1>
-            CARREGANDO...
-          </h1>
-          )}
+    <div id={styles.login}>
+      <h1>Github Profile</h1>
+      <p>Faça login com seu GITHUB para prosseguir:</p>
+      <button 
+      type="button" 
+      onClick={login}
+      id={styles.login_button}
+      >
+        login
+      </button>
+
+      <button 
+      type="button" 
+      onClick={logoff}
+      id={styles.logoff_button}
+      >
+        logoff
+      </button>
     </div>
     
   );

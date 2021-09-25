@@ -1,9 +1,6 @@
 #result{
     margin: 0;
     text-align: center;
-  
-    
-    
 
     img{
         width: 15rem;
@@ -13,12 +10,19 @@
         
     }
 
-    .Buttons{
-        margin: 0.5rem 5rem; 
+   #button_repos{
+        padding:4rem;
+        padding-left: 14rem;
+        width: 50%; 
         display: inline-flex;
-        
-    }
-    
+        color:black;
+   }
+   #button_starred{
+    padding:4rem;
+    width: 50%;
+    display: inline-flex;
+    color:black;
+   }   
     
 }
 

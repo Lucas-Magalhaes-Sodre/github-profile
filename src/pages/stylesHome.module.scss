@@ -1,6 +1,37 @@
-#pesquisar__perfil{
+#home{
+    
+    width: 50rem; 
+    height: 20rem;
     background-color: white;
+    margin: 15rem auto 10rem auto;
+    color:red;
+    text-align: center;
+    
+h1{
+  padding-top: 2rem; 
+  padding-bottom: 0.5rem; 
+}
+p{
     color: black;
-    border: 0;
+    padding-top: 0.5rem; 
+    padding-bottom: 1rem; 
+}
+#escrever__perfil{
+     
+    height: 2rem;
+    width: 17.3rem;
+}
+#escrever__perfil:hover{
+    
+    background-color:rgb(224, 216, 216);
+}
+button{
+    background-color: rgb(128, 128, 128);
+    padding: 0.5rem;
     margin-top: 0.5rem;
+}
+button:hover{
+    background-color:green;
+}
+
 }
