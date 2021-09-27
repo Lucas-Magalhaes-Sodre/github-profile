@@ -4,7 +4,6 @@ import { FormEvent,  useState, useEffect } from 'react';
 import { api } from '../services/client'
 
 import { TheSearchField } from '../components/TheSearchField'
-//import Cookie from 'js-cookie'
 
 import styles from './stylesHome.module.scss';
 //import { useSession } from 'next-auth/client';
@@ -16,14 +15,8 @@ export default function Home() {
    // const [session] = useSession()
     const router = useRouter()
 
-  /*  useEffect(() => {
-        const token = Cookie.get('token')
-  
-        if (!token) {
-            router.replace('/')
-        }
-    },[])*/
-
+    /*if(session){
+        router.replace('/')}*/  
     
     async function getUserData(event: FormEvent) {
 

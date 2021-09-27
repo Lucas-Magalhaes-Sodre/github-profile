@@ -9,26 +9,9 @@ import { useEffect} from 'react';
 export default function Home() {
   const router = useRouter();
   const [session] = useSession();
-
-
- /*function login(){
-  Cookie.set('token', 'custon-token-here',)
-  signIn('github')
-}*/
  
   if(session){
     router.push('home')}
-  
-  
-  
- 
-
- /*function logoff(){
-   Cookie.remove('token')
-}*/
-
-
-
 
   return (
     <div id={styles.login}>
