@@ -1,22 +1,15 @@
 import { useRouter } from 'next/router'
-import { FormEvent,  useState, useEffect } from 'react';
-
+import { FormEvent,  useState } from 'react';
 import { api } from '../services/client'
-
 import { TheSearchField } from '../components/TheSearchField'
 
 import styles from './stylesHome.module.scss';
-//import { useSession } from 'next-auth/client';
-
 
 export default function Home() {
 
     const [searchedValue, setSearchedValue] = useState('');
-   // const [session] = useSession()
-    const router = useRouter()
 
-    /*if(session){
-        router.replace('/')}*/  
+    const router = useRouter()
     
     async function getUserData(event: FormEvent) {
 
