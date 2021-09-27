@@ -1,4 +1,4 @@
-import { useSession } from "next-auth/client";
+//import { useSession } from "next-auth/client";
 import { useEffect, useState } from "react";
 import { api } from "../../services/client";
 
@@ -47,7 +47,7 @@ import styles from './styles.module.scss'
                 onClick={() => getRepos({ profile: username })}
                 >
 
-                    <h4>Repos</h4>
+                    <h2>Repos</h2>
 
                 </button>
             </div>

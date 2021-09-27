@@ -49,7 +49,7 @@ export function Starred() {
          id={styles.button_starred}
          onClick={() => getStarred({ profile: username})}
          >
-           <h4>Starred</h4>
+           <h2>Starred</h2>
         </button>
         </div>
 

@@ -1,9 +1,9 @@
-import { signIn, useSession } from "next-auth/client";
+//import { signIn, useSession } from "next-auth/client";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Repos } from "../Repos";
 import { Starred } from "../Starred";
-import Cookie from 'js-cookie'
+//import Cookie from 'js-cookie'
 
 import styles from './styles.module.scss'
 
@@ -17,7 +17,7 @@ export function ResultsView({ name, avatar_url }: UserProps) {
   
    const [username, setUserName] = useState('');
 
-   const [ session, loading] = useSession();
+  /* const [ session, loading] = useSession();
 
    const router = useRouter()
 
@@ -27,25 +27,27 @@ export function ResultsView({ name, avatar_url }: UserProps) {
       if (!token) {
           router.replace('/')
       }
-  },[])
+  },[])*/
 
-   /*useEffect(() => {
+   useEffect(() => {
       if (localStorage)
          setUserName(localStorage.getItem('username'))
-   }, []);*/
+   }, []);
 
       
 
    return (
       
       <div id={styles.result}>
-
-         <img id={styles.foto__perfil} src={avatar_url} alt={name} />
-         <h3>{name}</h3>
-         <div id={styles.button_repos}>
+         
+            <img id={styles.foto__perfil} src={avatar_url} alt={name} />           
+         
+            <h1>{name}</h1>
+         
+         <div id={styles.repos}>
             <Repos />
          </div>
-         <div id={styles.button_starred}>
+         <div id={styles.starred}>
              <Starred />
          </div>
      </div>

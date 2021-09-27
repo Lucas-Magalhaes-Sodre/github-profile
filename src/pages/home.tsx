@@ -4,24 +4,25 @@ import { FormEvent,  useState, useEffect } from 'react';
 import { api } from '../services/client'
 
 import { TheSearchField } from '../components/TheSearchField'
-import Cookie from 'js-cookie'
+//import Cookie from 'js-cookie'
 
 import styles from './stylesHome.module.scss';
+//import { useSession } from 'next-auth/client';
 
 
 export default function Home() {
 
     const [searchedValue, setSearchedValue] = useState('');
-
+   // const [session] = useSession()
     const router = useRouter()
 
-    useEffect(() => {
+  /*  useEffect(() => {
         const token = Cookie.get('token')
-
+  
         if (!token) {
             router.replace('/')
         }
-    },[])
+    },[])*/
 
     
     async function getUserData(event: FormEvent) {

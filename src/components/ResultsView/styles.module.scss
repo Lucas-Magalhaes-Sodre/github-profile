@@ -10,18 +10,19 @@
         
     }
 
-   #button_repos{
-        padding:4rem;
-        padding-left: 14rem;
+   #repos{
+
         width: 50%; 
-        display: inline-flex;
         color:black;
+        display: inline-flex;
+        justify-content: center;
    }
-   #button_starred{
-    padding:4rem;
-    width: 50%;
-    display: inline-flex;
-    color:black;
+   #starred{
+    
+        width: 50%; 
+        color:black;
+        display: inline-flex;
+        justify-content: center;
    }   
     
 }
