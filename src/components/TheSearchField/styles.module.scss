@@ -1,9 +1,14 @@
     #header {
         width: 20rem; 
-        height: 6rem;
-        margin: 15rem auto 10rem auto;
+        height: 20rem;
         background-color: white;
         color:red;
         text-align: center;
         border-radius: 1rem;
+        position: absolute;
+        bottom:0;
+        right: 0;
+        left:0;
+        top: 0;
+        margin: auto;
     }

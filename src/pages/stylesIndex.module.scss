@@ -2,9 +2,14 @@
     
         width: 50rem; 
         height: 20rem;
-        margin: 15rem auto 10rem auto;
         color:red;
         text-align: center;
+        position: absolute;
+        bottom:0;
+        right: 0;
+        left:0;
+        top: 0;
+        margin: auto;
         
 h1{
       padding-top: 2rem; 
