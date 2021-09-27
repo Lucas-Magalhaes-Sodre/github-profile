@@ -7,8 +7,7 @@
     padding: 1.3rem;
     display: inline-block;
     margin-left: auto;
-    margin-right: auto;
-   
+    margin-right: auto;   
 
     h1{
         text-align: center;  
@@ -28,6 +27,5 @@
 }
 #button_repos:hover{
    opacity: 70%;
-   
-    
+   cursor: pointer;      
 }

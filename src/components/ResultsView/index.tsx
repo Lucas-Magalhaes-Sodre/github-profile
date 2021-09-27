@@ -1,9 +1,7 @@
-//import { signIn, useSession } from "next-auth/client";
-import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Repos } from "../Repos";
 import { Starred } from "../Starred";
-//import Cookie from 'js-cookie'
+
 
 import styles from './styles.module.scss'
 
@@ -51,6 +49,5 @@ export function ResultsView({ name, avatar_url }: UserProps) {
              <Starred />
          </div>
      </div>
-   );
+   )
 }
-   

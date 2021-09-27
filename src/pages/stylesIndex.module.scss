@@ -26,8 +26,10 @@ button{
 }
 #login_button:hover{
         background-color:green;
+        cursor: pointer;
 }
 #logoff_button:hover{
         background-color:red;
+        cursor: pointer;
 }
 }

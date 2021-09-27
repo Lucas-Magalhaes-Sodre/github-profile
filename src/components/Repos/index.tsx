@@ -1,4 +1,3 @@
-//import { useSession } from "next-auth/client";
 import { useEffect, useState } from "react";
 import { api } from "../../services/client";
 
@@ -17,7 +16,6 @@ import styles from './styles.module.scss'
     const [repos, setRepos] = useState<RepositoryData[]>()
  
     const [username, setUserName] = useState('');
- 
     
  
     useEffect(() => {
