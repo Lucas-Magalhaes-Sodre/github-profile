@@ -1,5 +1,7 @@
 #starred{
-    background-color: rgb(228, 220, 220);
+    animation: gradient 10s ease infinite;
+    background:linear-gradient(-45deg, #ee7252,#e73c7e,#23a6d5,#23d5ab)no-repeat;
+    background-size: 300% 300%;
     color: black;
     border: 0.2rem solid black;
     border-radius: 20px;
@@ -7,7 +9,8 @@
     padding: 1.3rem;
     display: inline-block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;   
+    margin-bottom: 2rem;
 
     h1{
         text-align: center;
@@ -30,3 +33,16 @@
    cursor: pointer;
 }
 
+@keyframes gradient {
+    0%{
+        background-position: 0 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0 50%;
+    }
+}
