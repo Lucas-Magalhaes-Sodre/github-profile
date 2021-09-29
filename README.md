@@ -25,7 +25,14 @@ Para utilizar os Endpoints da aplicação, você precisará estar autenticado, p
 
 Guia Autenticação: https://docs.github.com/pt/developers/apps/building-oauth-apps
 
-Insira as informações obtidas após a seguir passo a passo o guia autenticação no arquivo ".env.example".
+Insira as informações (Client ID e Client secrets) obtidas após a seguir passo a passo o guia autenticação, as insira no arquivo ".env".
+
+## Observação:
+Ao criar seu "OAuth Apps" ultilize a <strong>(Homepage URL e a Authorization callback URL)</strong> de acordo com o exemplo abaixo:
+
+
+![WhatsApp Image 2021-09-27 at 15 27 10](https://user-images.githubusercontent.com/82623967/134965062-3c2dc1d3-07a5-4d55-a7ff-11f2355be26f.jpeg)
+
 
 Instale as dependências necessárias como por exemplo o "yarn" antes de colocar a aplicação para rodar.
 
